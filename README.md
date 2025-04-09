@@ -26,17 +26,17 @@ This project is a web application for Company ABC that includes a responsive lan
 1. Clone the repository:
 2.Update src/main/resources/application.properties with your database credentials.
 
-*Running the Application
+##Running the Application
 1.Start the application:
   mvn spring-boot:run
 2.Access the landing page at http://localhost:8080 and the CMS at http://localhost:8080/cms.html.
 
-*API Endpoints
+##API Endpoints
 GET /api/heading: Retrieve the current heading.
 POST /api/heading: Update the heading (JSON body: {"headingText": "New Heading"}).
 
-*Contributing
+##Contributing
 Contributions are welcome! Please submit a pull request or open an issue.
 
-*License
+##License
 This project is licensed under the MIT License.
