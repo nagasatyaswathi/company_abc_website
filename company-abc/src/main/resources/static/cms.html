@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CMS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Update Heading</h2>
+  <form id="cms-form">
+    <input type="text" id="heading" placeholder="Enter heading" />
+    <button type="submit">Update</button>
+  </form>
+  <script>
+    document.getElementById('cms-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const heading = document.getElementById('heading').value;
+      fetch('/api/heading', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ headingText: heading })
+      })
+      .then(res => res.json())
+      .then(data => alert('Heading updated!'));
+    });
+  </script>
+</body>
+</html>
